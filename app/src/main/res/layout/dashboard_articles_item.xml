@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/huge"
+    android:orientation="horizontal"
+    android:weightSum="12">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/large"
+        android:layout_marginRight="@dimen/large"
+        android:elevation="6dp"
+        android:src="@drawable/profile_pic_default"
+        tools:targetApi="lollipop" />
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_weight="8"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginRight="@dimen/small">
+
+        <TextView
+            android:id="@+id/tv_article_item_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small"
+            android:layout_marginTop="@dimen/huge"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/dash"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_article_item_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_article_item_body"
+            android:layout_alignLeft="@+id/tv_article_item_body"
+            android:layout_alignRight="@+id/tv_article_item_body"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/dash"
+            android:textSize="@dimen/medium_text" />
+
+        <TextView
+            android:id="@+id/tv_article_item_thompson"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_article_item_author"
+            android:layout_alignLeft="@+id/tv_article_item_body"
+            android:layout_marginTop="@dimen/tiny"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/Thompson"
+            android:textSize="@dimen/medium_text" />
+
+
+        <TextView
+            android:id="@+id/tv_article_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_article_item_author"
+            android:layout_alignTop="@+id/tv_article_item_thompson"
+            android:layout_alignRight="@+id/tv_article_item_body"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/dash"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1.4"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large"
+        android:text=">"
+        android:textColor="@color/black"
+        android:textSize="50sp" />
+
+</LinearLayout>
